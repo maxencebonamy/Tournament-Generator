@@ -11,6 +11,8 @@
 
 This software allows you to generate a multiplayer and multigame tournament plannning with a customizable number of teams and games, and with 1V1 confrontations.
 
+To do this, simply enter the team and game names in the `config.json` file, then run the program, and an Excel file will be generated with the entire tournament schedule.
+
 <br>
 
 <p align="center">
@@ -52,7 +54,7 @@ python src
 </p>
 
 ### Input format:
-To configure the tournament, simply edit the "config.json" file. In this file, there's a list containing the team names, as well as a list containing the game names. This automatically determines the number of teams and games.
+To configure the tournament, simply edit the `config.json` file. In this file, there's a list containing the team names, as well as a list containing the game names. This automatically determines the number of teams and games.
 
 ### Output format:
 The program ends by generating an Excel file containing 3 pages, each illustrating the overall tournament schedule, but from different points of view.
