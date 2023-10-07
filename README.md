@@ -58,9 +58,16 @@ To configure the tournament, simply edit the `config.json` file. In this file, t
 
 ### Output format:
 The program ends by generating an Excel file containing 3 pages, each illustrating the overall tournament schedule, but from different points of view.
+
 - **Global planning:** All games by team and time slot.
+![image](https://github.com/maxencebonamy/Tournament-Generator/assets/66129931/d1a9755d-2423-471d-b001-96f0c247bc22)
+
 - **Teams planning:** All team games with the team they are playing for each game, according to time slot.
+![image](https://github.com/maxencebonamy/Tournament-Generator/assets/66129931/1a1b7fc0-2f41-4c66-9260-123b6c2ddeb1)
+
 - **Games planning:** All teams playing against each other for each game, according to time slot.
+![image](https://github.com/maxencebonamy/Tournament-Generator/assets/66129931/a3d00d27-24f0-4934-8a8a-e1ad8132de66)
+
 
 ### Constraints:
 - The number of teams must be even, as this is a 1V1 tournament.
