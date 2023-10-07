@@ -10,8 +10,12 @@ NB_ITER = 10
 def main():
     style_print("\n⚔️\tTOURNAMENT GENERATOR\t⚔️", Style.BOLD, Style.FAIL)
 
-    with open("config.json", 'r') as config_file:
-        config = json.load(config_file)
+    try:
+        with open("config.json", 'r') as config_file:
+            config = json.load(config_file)
+    except:
+        style_print("⚠ Cannot find the \"config.json\" file!", Style.WARNING, Style.BOLD)
+        return
     
     teams = config["teams"]
     games = config["games"]
@@ -60,3 +64,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("\nPress \"enter\" to quit the program...\n")
+    input()

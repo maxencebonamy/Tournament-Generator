@@ -17,12 +17,6 @@ This software allows you to generate a multiplayer and multigame tournament plan
 	<img src="https://github.com/maxencebonamy/maxencebonamy/blob/main/assets/2_Get_Started.png" width="100%" alt="Get Started">
 </p>
 
-### Launch the software:
-
-1. Click on the <a href="https://github.com/maxencebonamy/Tournament-Generator/releases" target="_blank">Releases</a> button on the right and select the **latest version**.
-2. Download the **.zip** archive and extract the files.
-3. Run the **.exe** executable.
-
 ### Run the program:
 
 > [!NOTE]
@@ -57,7 +51,10 @@ python src
 	<img src="https://github.com/maxencebonamy/maxencebonamy/blob/main/assets/3_Features.png" width="100%" alt="Features">
 </p>
 
-### Output format :
+### Input format:
+To configure the tournament, simply edit the "config.json" file. In this file, there's a list containing the team names, as well as a list containing the game names. This automatically determines the number of teams and games.
+
+### Output format:
 The program ends by generating an Excel file containing 3 pages, each illustrating the overall tournament schedule, but from different points of view.
 - **Global planning:** All games by team and time slot.
 - **Teams planning:** All team games with the team they are playing for each game, according to time slot.
