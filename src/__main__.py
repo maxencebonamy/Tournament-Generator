@@ -5,6 +5,7 @@ from utils import condition_input, style_print, style_input, Style
 from tqdm import tqdm
 from excel import Excel
 
+NB_ITER = 10
 
 def main():
     style_print("\n⚔️\tTOURNAMENT GENERATOR\t⚔️", Style.BOLD, Style.FAIL)
@@ -22,31 +23,11 @@ def main():
         style_print("⚠ Not enough games for this number of teams!", Style.WARNING, Style.BOLD)
         return
 
-    # teams = int(condition_input(
-    #     "\nPlease specify the number of teams: ",
-    #     lambda value: int(value) % 2 == 0,
-    #     lambda: style_print("⚠ Number of teams must be even!", Style.WARNING, Style.BOLD)
-    # ))
-
-    # games = int(condition_input(
-    #     "\nPlease specify the number of games: ",
-    #     lambda value: int(value) * 2 >= teams,
-    #     lambda: style_print("⚠ Not enough games for this number of teams!", Style.WARNING, Style.BOLD)
-    # ))
-
-    # nb_iter = int(condition_input(
-    #     "\nPlease specify the number of iterations: ",
-    #     lambda value: int(value) > 0,
-    #     lambda: style_print("⚠ Number of iterations must be greater than 0!", Style.WARNING, Style.BOLD)
-    # ))
-
-    nb_iter = 10
-
     planning: Tournament
     while True:
         style_print("\nGeneration of the tournament...", Style.BOLD, Style.OKCYAN)
         redundances = len(games) + 1
-        for i in tqdm(range(nb_iter)):
+        for i in tqdm(range(NB_ITER)):
             tournament = Tournament(teams=len(teams), games=len(games))
             tournament.plan()
             value = tournament.get_max_redundances()
